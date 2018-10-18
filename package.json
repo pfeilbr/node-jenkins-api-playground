@@ -1,0 +1,17 @@
+{
+  "name": "node-jenkins-api-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "jenkins": "^0.22.1",
+    "jenkins-api": "^0.3.1"
+  }
+}
