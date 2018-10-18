@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const util = require("util");
 
-const run_jenkins_examples = async () => {
+const runJenkinsExamples = async () => {
   const jenkins = require("jenkins")({
     baseUrl: `https://${process.env.USERNAME}:${process.env.PASSWORD}@${
       process.env.JENKINS_BASE_URL
@@ -34,4 +34,4 @@ const run_jenkins_examples = async () => {
   build()
 };
 
-run_jenkins_examples();
+runJenkinsExamples();
