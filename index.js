@@ -21,8 +21,15 @@ const runJenkinsExamples = async () => {
   };
 
   const build = () => {
-    // jenkins.job.build({ name: jobName, parameters: {} }, function(err, data) {
-    jenkins.job.build(jobName, function(err, data) {
+    const parameters = {
+      TAG: "v0.0.7",
+      ENV: "test",
+      COUNTRY: "uk",
+      FORCE_FULL_BUILD: true
+    };
+
+    jenkins.job.build({ name: jobName, parameters }, function(err, data) {
+      // jenkins.job.build(jobName, function(err, data) { // no params example
       if (err) {
         return console.error(err);
       }
@@ -30,8 +37,8 @@ const runJenkinsExamples = async () => {
     });
   };
 
-  jobConfig()
-  build()
+  jobConfig();
+  build();
 };
 
 runJenkinsExamples();
